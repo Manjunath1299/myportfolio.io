@@ -1,0 +1,181 @@
+
+@import url('https://fonts.googleapis.com/css2?family=AR+One+Sans&family=Open+Sans:wght@600&family=Rubik&display=swap');
+body{
+    background-color: #fdfaf3;
+    font-family: 'AR One Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    margin:0px;
+    width:100vw;
+    overflow-x: hidden;
+}
+/* Header Styling */
+.header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #000;
+    /* image styling */
+    position:sticky;
+    top:0;
+    left:0;
+    background-color: #fdfaf3;
+    z-index: 1000;
+    /* image styling ends */
+}
+.title{
+    /* 24px is equal to 1.5rem, 1rem is equal to 8px */
+    margin:0px;
+    font-size: 24px;  
+    font-weight:700;
+    cursor:pointer
+    
+}
+.title:hover{
+    color: #ff4d00;
+    transition: all 0.3s;
+}
+.name{
+    /* border -right is for to get line after name */
+    border-right: 2px solid #000;
+    padding:1rem;
+}
+.resume-div{
+    border-left: 2px solid #000;
+    /* This is for Svg */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:1rem;
+    padding:1rem;
+}
+.main-component{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.left-component{
+    width: 60%;
+    border-right: 2px solid #000;
+    height:100vh;
+}
+.right-component{
+    width: 40%;
+    min-height:100vh;
+    background-image: url("./assets/me.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.chips-flex{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap:1rem;
+}
+.chips{
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0.35rem  1rem;
+    text-align: center;
+    border: 2px solid #000;
+    min-width: 200px;
+    border-radius: 4rem;
+    cursor: pointer;
+}
+.main-text{
+    font-size: 24px;  
+    font-weight:700;   
+}
+.chips:hover{
+    background-color: #000;
+    color: #fdfaf3;
+    border-color: #fdfaf3;
+    transition: all 0.3s;
+}
+/* for p tag */
+.para,
+.list{
+    font-size: 20px;
+}
+.my-info{
+    border-bottom: 2px solid #000;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+.education{
+    border-bottom: 2px solid #000;
+    padding: 1rem;
+}
+a{
+    color:#000;
+    text-decoration: none;
+}
+a:hover{
+    color:#ff4d00;
+    text-decoration: underline;
+    transition: all 0.1s;
+}
+.social-component{
+    border-bottom: 2px soild #000;
+    padding:1.5 rem;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.social-flex{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap:1.5rem;
+}
+.socio-img{
+    border: 2px solid #000;
+    border-radius: 100%;
+    height:40px ;
+    width: 40px;
+    display:flex;
+    align-items:center ;
+    justify-content: center;
+}
+.socio-img:hover{
+    transform:scale(1.1);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+@media only screen and (max-width: 1100px) {
+    .right-component,.left-component{
+        width:50%;
+    }
+}
+@media only screen and (max-width: 950px) {
+    .main-component{
+       flex-direction:column-reverse;
+    }
+    .right-component,.left-component{
+        width:100%;
+    }
+    .chips{
+        font-size: 16px;
+        min-width: 0px !important;
+    }
+    .my-info{
+        margin-top: 0rem;
+    }
+    .social-flex{
+        gap:1rem;
+    }
+    .name,
+    .resume-div{
+        border:none;
+    }
+    .resume-div h1{
+        display:none
+    }
+    .para,
+    .list{
+    font-size: 18px;
+    }
+    .my-info,.social-component,.education{
+        padding:1rem;
+    }
+}
